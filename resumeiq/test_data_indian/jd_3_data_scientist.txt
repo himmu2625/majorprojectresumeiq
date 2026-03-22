@@ -1,0 +1,16 @@
+Job Title: Machine Learning Engineer
+Company: DataGyan AI, Pune
+Experience: 2-5 Years
+
+Role:
+Join our AI-research lab in Pune to build next-generation NLP models for Indic languages.
+
+Responsibilities:
+- Train and fine-tune transformer models for Text Classification and NER.
+- Deploy scalable inferencing APIs using FastAPI and TorchServe.
+
+Skills:
+- Proficiency in Python, PyTorch, and HuggingFace Transformers
+- Experience with NLP techniques (TF-IDF, Word2Vec, BERT)
+- Familiarity with MLOps pipelines (MLflow, Docker)
+- Strong statistics and mathematics background

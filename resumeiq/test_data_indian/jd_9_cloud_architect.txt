@@ -1,0 +1,12 @@
+Job Title: Cloud Solutions Architect
+Company: Enterprise Cloud Solutions, Mumbai
+Experience: 8+ Years
+
+Role:
+Lead our cloud migration strategies for banking clients across India.
+
+Skills:
+- AWS Certified Solutions Architect Professional
+- Deep expertise in multi-cloud (AWS, Azure, GCP) architecture
+- Enterprise network design, microservices, and serverless (Lambda)
+- Experience presenting high-level technical strategies to C-level executives

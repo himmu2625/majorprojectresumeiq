@@ -1,0 +1,12 @@
+Job Title: Blockchain / Web3 Developer
+Company: CryptoFlow India, Bengaluru
+Experience: 1-3 Years
+
+Role:
+Join our DeFi startup in Bengaluru to build smart contracts for Ethereum layer 2 chains.
+
+Skills needed:
+- Proficiency in Solidity, Hardhat, and Web3.js / Ethers.js
+- Understanding of ERC20, ERC721, and DeFi protocols (Uniswap, Aave)
+- Experience deploying and auditing smart contracts
+- Backend experience with Node.js is a plus

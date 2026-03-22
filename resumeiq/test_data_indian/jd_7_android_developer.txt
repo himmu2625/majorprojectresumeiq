@@ -1,0 +1,16 @@
+Job Title: Senior Android Developer
+Company: MobiTech Innovations, Kochi
+Experience: 2-4 Years
+
+About the Role:
+Looking for a passionate Android dev to build our fast-growing e-commerce app.
+
+Responsibilities:
+- Develop natively for Android using Kotlin and Android Studio.
+- Implement robust architectural patterns like MVVM.
+- Integrate REST APIs and third-party SDKs.
+
+Requirements:
+- 2+ years of professional Kotlin experience
+- Strong grasp of Coroutines, Room DB, and Jetpack Compose
+- Experience publishing apps on the Google Play Store

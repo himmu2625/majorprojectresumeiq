@@ -1,0 +1,13 @@
+Job Title: DevOps & Cloud Engineer
+Company: CloudScale India, Noida
+Experience: 3-6 Years
+
+Role:
+Maintain 99.99% uptime for our SaaS offerings. 
+
+Skills:
+- AWS (VPC, EC2, RDS, IAM, CloudFront)
+- Infrastructure as Code using Terraform or CloudFormation
+- CI/CD using Jenkins or GitHub Actions
+- Strong Linux administration and Bash scripting
+- Kubernetes and Docker

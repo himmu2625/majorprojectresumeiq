@@ -1,0 +1,12 @@
+Job Title: MERN Full Stack Developer
+Company: InnovateTech India, Gurugram
+Experience: 2+ Years
+
+Role:
+Looking for a Full Stack engineer to build a massive B2B e-commerce platform from scratch.
+
+Skills Needed:
+- Deep expertise in MongoDB, Express.js, React.js, and Node.js
+- Experience building RESTful and GraphQL APIs
+- Knowledge of AWS, CI/CD, and Redis caching
+- Problem-solving mindset with a B.Tech in Computer Science

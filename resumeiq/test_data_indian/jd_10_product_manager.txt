@@ -1,0 +1,13 @@
+Job Title: Technical Product Manager
+Company: NextGen Startup, Delhi NCR
+Experience: 4-6 Years
+
+Role:
+Bridge the gap between engineering and business to deliver our B2B SaaS product.
+
+Skills:
+- Experience writing PRDs, TRDs, and managing Jira backlogs
+- Strong understanding of Agile/Scrum methodologies
+- Background in software engineering (B.Tech preferred)
+- Excellent communication and stakeholder management
+- Data-driven approach using Google Analytics, Mixpanel, SQL

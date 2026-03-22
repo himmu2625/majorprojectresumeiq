@@ -1,0 +1,17 @@
+Job Title: Senior Backend Developer (Python)
+Company: PaySwift India, Hyderabad
+Experience: 4-7 Years
+
+About the Role:
+PaySwift is revolutionizing digital payments in India. We need a strong Python backend engineer to optimize transaction systems.
+
+Responsibilities:
+- Architect, build, and maintain highly scalable backend services using Python and FastAPI.
+- Manage large-scale PostgreSQL and NoSQL databases (MongoDB).
+- Integrate with banking gateways and UPI protocols.
+
+Requirements:
+- 4+ years of professional backend development
+- Expert in Python, Django, or FastAPI
+- Experience with Docker, Kubernetes, and AWS (EC2, S3)
+- Strong grasp of Data Structures and system design
