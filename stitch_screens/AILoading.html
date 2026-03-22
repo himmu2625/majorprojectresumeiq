@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ResumeIQ - Uploading &amp; Analyzing</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "surface-variant": "#e2e0fc",
+                "on-surface-variant": "#434750",
+                "tertiary-fixed-dim": "#7dd8ad",
+                "on-secondary-container": "#284a85",
+                "surface-container-lowest": "#ffffff",
+                "surface-container-highest": "#e2e0fc",
+                "inverse-on-surface": "#f2efff",
+                "secondary": "#3d5d9a",
+                "on-tertiary-fixed-variant": "#005237",
+                "on-tertiary-fixed": "#002114",
+                "on-primary": "#ffffff",
+                "surface-tint": "#005ac4",
+                "on-secondary-fixed": "#001a41",
+                "surface-container": "#efecff",
+                "on-error-container": "#93000a",
+                "surface-container-low": "#f5f2ff",
+                "surface-dim": "#dad7f3",
+                "surface-container-high": "#e8e5ff",
+                "surface-bright": "#fcf8ff",
+                "error-container": "#ffdad6",
+                "tertiary": "#003120",
+                "error": "#ba1a1a",
+                "tertiary-fixed": "#99f5c8",
+                "surface": "#fcf8ff",
+                "primary": "#00285f",
+                "on-secondary": "#ffffff",
+                "secondary-container": "#9cbbfe",
+                "inverse-surface": "#2f2e43",
+                "tertiary-container": "#004a32",
+                "on-primary-fixed-variant": "#004396",
+                "on-tertiary": "#ffffff",
+                "on-surface": "#1a1a2e",
+                "on-error": "#ffffff",
+                "outline-variant": "#c4c6d1",
+                "secondary-fixed": "#d8e2ff",
+                "primary-container": "#003d8a",
+                "outline": "#747781",
+                "on-primary-fixed": "#001a42",
+                "on-secondary-fixed-variant": "#234581",
+                "on-background": "#1a1a2e",
+                "on-primary-container": "#84acff",
+                "on-tertiary-container": "#62bd93",
+                "primary-fixed-dim": "#aec6ff",
+                "secondary-fixed-dim": "#adc6ff",
+                "background": "#fcf8ff",
+                "primary-fixed": "#d8e2ff",
+                "inverse-primary": "#aec6ff"
+              },
+              fontFamily: {
+                "headline": ["Manrope"],
+                "body": ["Inter"],
+                "label": ["Inter"],
+                "mono": ["JetBrains Mono"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .animate-pulse-slow {
+            animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: .7; transform: scale(1.05); }
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- TopAppBar Component -->
+<header class="bg-[#00285f] dark:bg-[#001a3d] flex justify-between items-center w-full px-8 h-16 shadow-lg shadow-blue-900/20 fixed top-0 z-50">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-bold tracking-tighter text-white font-headline">ResumeIQ</span>
+<nav class="hidden md:flex gap-6 items-center">
+<a class="text-blue-200/80 hover:text-white transition-colors font-headline tracking-tight" href="#">Dashboard</a>
+<a class="text-blue-200/80 hover:text-white transition-colors font-headline tracking-tight" href="#">Candidates</a>
+<a class="text-blue-200/80 hover:text-white transition-colors font-headline tracking-tight" href="#">Job Posts</a>
+<a class="text-blue-200/80 hover:text-white transition-colors font-headline tracking-tight" href="#">Analytics</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-white hover:bg-white/10 rounded-lg transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-white hover:bg-white/10 rounded-lg transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-white/20">
+<img alt="User Profile Avatar" class="w-full h-full object-cover" data-alt="Professional male recruiter profile photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMV7SLFEb9-Ml9OWBxrcglC9R2eXPL2E8ZETfNsnFatDqehZRd8MNrSOTHkEJ8jdw-bOc_QLJyfXpRPi5S_y3WU4IGF8gMVhnFDhcyQjmRyOA0_2tdY81qRax8OeowfRYSWWYgXRRdoIuiJSAIfejrIi9jCIl_MjGoqdSV4qNMnDvlN4ldKNwvC2TA-FKLiBG5EOBN-qE-FmmDgkB5f6-hQKoDQQnU_ypfvz1C9OI6iBH_hfHrAL_Cdw2z7VsGLZ2asCeqHtU38yWI"/>
+</div>
+</div>
+</header>
+<div class="flex pt-16 h-screen">
+<!-- SideNavBar Component -->
+<aside class="bg-[#f5f2ff] dark:bg-[#1a1a2e] h-screen w-64 flex flex-col py-6 gap-4 font-['Inter'] font-medium text-sm hidden md:flex shrink-0">
+<div class="px-6 mb-4">
+<h2 class="text-xl font-black text-[#00285f]">Recruiter Portal</h2>
+<p class="text-[10px] uppercase tracking-widest text-[#3d5d9a]/60">Enterprise Tier</p>
+</div>
+<nav class="flex flex-col gap-1 pr-4">
+<a class="bg-white dark:bg-[#00285f] text-[#00285f] dark:text-white rounded-l-xl border-l-4 border-[#3d5d9a] flex items-center gap-3 px-6 py-3 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="cloud_upload">cloud_upload</span>
+<span>Upload</span>
+</a>
+<a class="text-[#434750] dark:text-slate-400 hover:bg-white/50 flex items-center gap-3 px-6 py-3 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span>Parser</span>
+</a>
+<a class="text-[#434750] dark:text-slate-400 hover:bg-white/50 flex items-center gap-3 px-6 py-3 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="Fact_check">fact_check</span>
+<span>Match Score</span>
+</a>
+<a class="text-[#434750] dark:text-slate-400 hover:bg-white/50 flex items-center gap-3 px-6 py-3 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+<span>Talent Pool</span>
+</a>
+<a class="text-[#434750] dark:text-slate-400 hover:bg-white/50 flex items-center gap-3 px-6 py-3 hover:translate-x-1 transition-transform duration-200 mt-auto" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+</aside>
+<!-- Main Content (Blurred Background) -->
+<main class="flex-1 overflow-hidden relative">
+<div class="p-8 filter blur-sm opacity-40 pointer-events-none">
+<div class="max-w-4xl mx-auto space-y-8">
+<div class="h-64 bg-surface-container-low rounded-xl flex items-center justify-center border-2 border-dashed border-outline-variant/30">
+<p class="font-headline font-bold text-on-surface-variant">Drop your PDF here</p>
+</div>
+<div class="grid grid-cols-3 gap-6">
+<div class="h-32 bg-surface-container-low rounded-xl"></div>
+<div class="h-32 bg-surface-container-low rounded-xl"></div>
+<div class="h-32 bg-surface-container-low rounded-xl"></div>
+</div>
+</div>
+</div>
+<!-- Loading Overlay Modal -->
+<div class="absolute inset-0 z-40 bg-white/60 backdrop-blur-md flex items-center justify-center">
+<div class="w-full max-w-md p-10 flex flex-col items-center">
+<!-- Pulsing AI Brain Icon -->
+<div class="relative mb-12">
+<div class="absolute inset-0 bg-[#2E7CF6]/20 rounded-full blur-3xl animate-pulse"></div>
+<div class="relative w-32 h-32 bg-[#2E7CF6] rounded-full flex items-center justify-center text-white shadow-[0_0_50px_rgba(46,124,246,0.5)] animate-pulse-slow">
+<span class="material-symbols-outlined text-6xl" data-icon="psychology" style="font-variation-settings: 'FILL' 1;">psychology</span>
+</div>
+</div>
+<!-- Header -->
+<h3 class="font-headline text-2xl font-extrabold text-primary mb-2">Analyzing Intelligence</h3>
+<p class="text-on-surface-variant text-sm mb-10 font-body">This usually takes 5-8 seconds</p>
+<!-- Progress List -->
+<div class="w-full space-y-4 bg-surface-container-low p-6 rounded-xl border border-outline-variant/10">
+<!-- Step 1: Completed -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-6 h-6 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed-variant">
+<span class="material-symbols-outlined text-sm font-bold">check</span>
+</div>
+<span class="text-sm font-medium text-on-surface/60 line-through">Parsing PDF...</span>
+</div>
+<span class="font-mono text-[10px] text-tertiary-fixed-dim uppercase tracking-tighter">Done</span>
+</div>
+<!-- Step 2: Active -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center text-primary animate-pulse">
+<span class="material-symbols-outlined text-sm">settings_b_roll</span>
+</div>
+<span class="text-sm font-bold text-primary">Generating embeddings...</span>
+</div>
+<div class="flex gap-1">
+<div class="w-1 h-1 rounded-full bg-primary animate-bounce"></div>
+<div class="w-1 h-1 rounded-full bg-primary animate-bounce [animation-delay:-.3s]"></div>
+<div class="w-1 h-1 rounded-full bg-primary animate-bounce [animation-delay:-.5s]"></div>
+</div>
+</div>
+<!-- Step 3: Pending -->
+<div class="flex items-center justify-between opacity-40">
+<div class="flex items-center gap-3">
+<div class="w-6 h-6 rounded-full border border-outline-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">more_horiz</span>
+</div>
+<span class="text-sm font-medium">Computing similarity...</span>
+</div>
+<span class="font-mono text-[10px] uppercase tracking-tighter">Pending</span>
+</div>
+<!-- Step 4: Pending -->
+<div class="flex items-center justify-between opacity-40">
+<div class="flex items-center gap-3">
+<div class="w-6 h-6 rounded-full border border-outline-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">auto_awesome</span>
+</div>
+<span class="text-sm font-medium">Generating explanation...</span>
+</div>
+<span class="font-mono text-[10px] uppercase tracking-tighter">Waiting</span>
+</div>
+</div>
+<!-- Footer AI Badge -->
+<div class="mt-8 px-4 py-2 bg-surface-variant/30 rounded-full flex items-center gap-2 border border-outline-variant/10">
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-[10px] font-mono uppercase tracking-widest text-secondary font-bold">Secure AI Processing</span>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

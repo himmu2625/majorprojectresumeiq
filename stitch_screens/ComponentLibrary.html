@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ResumeIQ - Component Library</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcf8ff;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "surface-variant": "#e2e0fc",
+                "on-surface-variant": "#434750",
+                "on-secondary-container": "#284a85",
+                "tertiary-fixed-dim": "#7dd8ad",
+                "surface-container-lowest": "#ffffff",
+                "surface-container-highest": "#e2e0fc",
+                "inverse-on-surface": "#f2efff",
+                "secondary": "#3d5d9a",
+                "on-tertiary-fixed-variant": "#005237",
+                "on-primary": "#ffffff",
+                "on-tertiary-fixed": "#002114",
+                "on-secondary-fixed": "#001a41",
+                "surface-tint": "#005ac4",
+                "on-error-container": "#93000a",
+                "surface-container": "#efecff",
+                "surface-container-low": "#f5f2ff",
+                "surface-dim": "#dad7f3",
+                "surface-container-high": "#e8e5ff",
+                "error-container": "#ffdad6",
+                "surface-bright": "#fcf8ff",
+                "error": "#ba1a1a",
+                "tertiary": "#003120",
+                "tertiary-fixed": "#99f5c8",
+                "surface": "#fcf8ff",
+                "primary": "#00285f",
+                "on-secondary": "#ffffff",
+                "secondary-container": "#9cbbfe",
+                "inverse-surface": "#2f2e43",
+                "tertiary-container": "#004a32",
+                "on-primary-fixed-variant": "#004396",
+                "on-tertiary": "#ffffff",
+                "on-surface": "#1a1a2e",
+                "on-error": "#ffffff",
+                "outline-variant": "#c4c6d1",
+                "primary-container": "#003d8a",
+                "secondary-fixed": "#d8e2ff",
+                "outline": "#747781",
+                "on-primary-fixed": "#001a42",
+                "on-secondary-fixed-variant": "#234581",
+                "on-background": "#1a1a2e",
+                "on-primary-container": "#84acff",
+                "on-tertiary-container": "#62bd93",
+                "primary-fixed-dim": "#aec6ff",
+                "secondary-fixed-dim": "#adc6ff",
+                "background": "#fcf8ff",
+                "primary-fixed": "#d8e2ff",
+                "inverse-primary": "#aec6ff"
+              },
+              fontFamily: {
+                "headline": ["Manrope"],
+                "body": ["Inter"],
+                "label": ["Inter"],
+                "mono": ["JetBrains Mono"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar Component -->
+<header class="fixed top-0 w-full h-[64px] z-50 bg-[#1B3F7A] shadow-lg flex items-center justify-between px-6 w-full">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black text-white tracking-tight font-headline">ResumeIQ</span>
+<nav class="hidden md:flex gap-6 text-sm font-headline">
+<a class="text-white border-b-2 border-white pb-1" href="#">Dashboard</a>
+<a class="text-slate-300 hover:text-white transition-colors" href="#">Jobs</a>
+<a class="text-slate-300 hover:text-white transition-colors" href="#">Candidates</a>
+<a class="text-slate-300 hover:text-white transition-colors" href="#">Analytics</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-white hover:bg-white/10 rounded-full transition-all active:scale-95 duration-150">
+<span class="material-symbols-outlined" data-icon="upload">upload</span>
+</button>
+<button class="p-2 text-white hover:bg-white/10 rounded-full transition-all active:scale-95 duration-150">
+<span class="material-symbols-outlined" data-icon="work">work</span>
+</button>
+<button class="p-2 text-white hover:bg-white/10 rounded-full transition-all active:scale-95 duration-150">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+</header>
+<!-- SideNavBar Component -->
+<aside class="fixed left-0 top-[64px] h-[calc(100vh-64px)] w-[240px] z-40 bg-slate-50 border-r border-slate-200 flex flex-col py-4 gap-2">
+<div class="px-6 mb-6">
+<h2 class="text-xl font-bold text-[#1B3F7A] font-headline">ResumeIQ</h2>
+<p class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">AI Recruitment</p>
+</div>
+<a class="bg-white text-[#1B3F7A] font-bold shadow-sm rounded-lg mx-2 flex items-center gap-3 px-4 py-3 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="dashboard">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="text-slate-600 hover:bg-slate-100 mx-2 rounded-lg flex items-center gap-3 px-4 py-3 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="work">work</span>
+<span class="text-sm font-medium">Jobs</span>
+</a>
+<a class="text-slate-600 hover:bg-slate-100 mx-2 rounded-lg flex items-center gap-3 px-4 py-3 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="group">group</span>
+<span class="text-sm font-medium">Candidates</span>
+</a>
+<a class="text-slate-600 hover:bg-slate-100 mx-2 rounded-lg flex items-center gap-3 px-4 py-3 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="analytics">analytics</span>
+<span class="text-sm font-medium">Analytics</span>
+</a>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-[240px] mt-[64px] p-10 max-w-7xl mx-auto">
+<div class="mb-12">
+<h1 class="text-4xl font-headline font-extrabold text-primary mb-2">Component Library</h1>
+<p class="text-on-surface-variant text-lg">Hire Smarter. Explain Every Decision.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Typography Section -->
+<section class="col-span-1 md:col-span-2 bg-surface-container-low p-8 rounded-xl">
+<h3 class="text-sm font-bold text-secondary mb-6 tracking-widest uppercase">Typography Scale</h3>
+<div class="space-y-6">
+<div>
+<p class="text-xs text-outline mb-1">Headline (Manrope Bold)</p>
+<h2 class="text-4xl font-headline font-bold text-on-surface">Candidate Evaluation</h2>
+</div>
+<div>
+<p class="text-xs text-outline mb-1">Body (Inter Regular/Medium)</p>
+<p class="text-base text-on-surface leading-relaxed">AI-driven insights are surfaced through a sophisticated hierarchy of light and depth. We are building an environment that feels authoritative and fluid.</p>
+</div>
+<div>
+<p class="text-xs text-outline mb-1">Scores (JetBrains Mono Bold)</p>
+<p class="text-3xl font-mono font-bold text-surface-tint">98.4% MATCH</p>
+</div>
+</div>
+</section>
+<!-- Color Swatches -->
+<section class="bg-surface-container-low p-8 rounded-xl">
+<h3 class="text-sm font-bold text-secondary mb-6 tracking-widest uppercase">Color Palette</h3>
+<div class="grid grid-cols-3 gap-3">
+<div class="flex flex-col gap-1">
+<div class="h-12 w-full bg-[#1B3F7A] rounded-lg"></div>
+<span class="text-[10px] font-mono uppercase text-center">Primary</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="h-12 w-full bg-[#2E7CF6] rounded-lg"></div>
+<span class="text-[10px] font-mono uppercase text-center">Accent</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="h-12 w-full bg-[#1A7F5A] rounded-lg"></div>
+<span class="text-[10px] font-mono uppercase text-center">Success</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="h-12 w-full bg-[#C0392B] rounded-lg"></div>
+<span class="text-[10px] font-mono uppercase text-center">Alert</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="h-12 w-full bg-[#D4730A] rounded-lg"></div>
+<span class="text-[10px] font-mono uppercase text-center">Warning</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="h-12 w-full bg-[#D0D7E3] rounded-lg"></div>
+<span class="text-[10px] font-mono uppercase text-center">Border</span>
+</div>
+</div>
+</section>
+<!-- Buttons -->
+<section class="bg-surface-container-low p-8 rounded-xl">
+<h3 class="text-sm font-bold text-secondary mb-6 tracking-widest uppercase">Interactive Elements</h3>
+<div class="flex flex-col gap-4">
+<button class="bg-[#2E7CF6] text-white h-11 px-6 rounded-lg font-bold hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
+                        Primary Action <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</button>
+<button class="bg-white border-2 border-[#1B3F7A] text-[#1B3F7A] h-11 px-6 rounded-lg font-bold hover:bg-[#1B3F7A]/5 transition-colors">
+                        Secondary Action
+                    </button>
+<button class="text-[#2E7CF6] h-11 px-6 rounded-lg font-medium hover:bg-[#2E7CF6]/5 transition-colors text-sm">
+                        Ghost Button
+                    </button>
+</div>
+</section>
+<!-- Inputs -->
+<section class="bg-surface-container-low p-8 rounded-xl col-span-1 md:col-span-2">
+<h3 class="text-sm font-bold text-secondary mb-6 tracking-widest uppercase">Form Inputs</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="relative">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline" data-icon="search">search</span>
+<input class="w-full h-11 pl-10 pr-4 bg-surface-container-lowest border border-outline-variant rounded-xl focus:ring-2 focus:ring-[#2E7CF6] focus:border-transparent outline-none transition-all" placeholder="Search candidates..." type="text"/>
+</div>
+<div>
+<input class="w-full h-11 px-4 bg-surface-container-lowest border border-outline-variant rounded-xl focus:ring-2 focus:ring-[#2E7CF6] focus:border-transparent outline-none transition-all" placeholder="Enter job title" type="text"/>
+</div>
+</div>
+</section>
+<!-- Skill Tags & Badges -->
+<section class="bg-surface-container-low p-8 rounded-xl">
+<h3 class="text-sm font-bold text-secondary mb-6 tracking-widest uppercase">Indicators</h3>
+<div class="space-y-6">
+<div class="flex flex-wrap gap-2">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant px-3 py-1 rounded-sm text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="check_circle">check_circle</span> React.js
+                        </span>
+<span class="bg-error-container text-on-error-container px-3 py-1 rounded-sm text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="cancel">cancel</span> Kubernetes
+                        </span>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex flex-col items-center">
+<span class="font-mono text-2xl font-bold text-[#1A7F5A]">85</span>
+<span class="text-[10px] font-bold text-outline">HIGH</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-mono text-2xl font-bold text-[#D4730A]">52</span>
+<span class="text-[10px] font-bold text-outline">MED</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-mono text-2xl font-bold text-[#C0392B]">24</span>
+<span class="text-[10px] font-bold text-outline">LOW</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Example AI Insight Card -->
+<section class="bg-surface-container-low p-8 rounded-xl col-span-1 md:col-span-3">
+<h3 class="text-sm font-bold text-secondary mb-6 tracking-widest uppercase">AI Insight Card</h3>
+<div class="bg-white p-6 rounded-xl border border-outline-variant/30 shadow-sm relative overflow-hidden">
+<div class="absolute top-4 right-4 bg-surface-variant/50 backdrop-blur-md px-3 py-1 rounded-lg border border-white/50">
+<span class="font-mono text-xs font-bold text-primary">CONFIDENCE: 94%</span>
+</div>
+<div class="flex items-start gap-6">
+<div class="w-16 h-16 rounded-full bg-slate-200 flex-shrink-0">
+<img alt="Profile" class="w-full h-full rounded-full object-cover" data-alt="Professional headshot of a male candidate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTXdIKV1604kKSpge12u3L5MK6EuptMRfoxkDg8LfMimzFiP0M0DE09_RT2nYML_WdRNWfnwAJFpamBufvX9E_OnUxf8A6XmCfzRblFXmXKuCt2S4M7g7ODIBj6hpatbGNL1VgJ-UcKUJmz1scmNtepI3cOWecxzTUCrAUQFUArJ2fDRXsluHPJU6BTwyBmHePL7jwKbq6WdrJoso24gzjjukHUu68bs3CSVw7vSlvyAqSWCI4NJy59_emiKz_gA7e77dJi2t2hzZm"/>
+</div>
+<div class="flex-1">
+<h4 class="text-2xl font-headline font-bold text-on-surface mb-1">Alex Rivera</h4>
+<p class="text-secondary font-medium mb-4">Senior Software Architect</p>
+<div class="bg-surface-variant/30 p-4 rounded-lg border border-outline-variant/10">
+<p class="text-sm text-on-surface-variant leading-relaxed">
+<span class="font-bold text-primary">AI Recommendation:</span> Strong match for the "Distributed Systems" lead role. Demonstrated expertise in AWS architecture and microservices. Missing some experience with legacy Java systems mentioned in secondary requirements.
+                                </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Icons Library -->
+<section class="bg-surface-container-low p-8 rounded-xl col-span-1 md:col-span-3">
+<h3 class="text-sm font-bold text-secondary mb-6 tracking-widest uppercase">Icon Set</h3>
+<div class="grid grid-cols-4 md:grid-cols-8 gap-8">
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-2xl text-secondary" data-icon="upload">upload</span>
+<span class="text-[10px] text-outline">Upload</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-2xl text-secondary" data-icon="description">description</span>
+<span class="text-[10px] text-outline">FileText</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-2xl text-secondary" data-icon="bar_chart">bar_chart</span>
+<span class="text-[10px] text-outline">BarChart</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-2xl text-[#1A7F5A]" data-icon="check_circle">check_circle</span>
+<span class="text-[10px] text-outline">Check</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-2xl text-[#C0392B]" data-icon="cancel">cancel</span>
+<span class="text-[10px] text-outline">XCircle</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-2xl text-[#D4730A]" data-icon="warning">warning</span>
+<span class="text-[10px] text-outline">Alert</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-2xl text-secondary" data-icon="lightbulb">lightbulb</span>
+<span class="text-[10px] text-outline">Insight</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-2xl text-secondary" data-icon="history">history</span>
+<span class="text-[10px] text-outline">History</span>
+</div>
+</div>
+</section>
+</div>
+</main>
+</body></html>

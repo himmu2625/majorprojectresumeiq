@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ResumeIQ - New Screening</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "surface-variant": "#e2e0fc",
+                "on-surface-variant": "#434750",
+                "tertiary-fixed-dim": "#7dd8ad",
+                "on-secondary-container": "#284a85",
+                "surface-container-lowest": "#ffffff",
+                "surface-container-highest": "#e2e0fc",
+                "inverse-on-surface": "#f2efff",
+                "secondary": "#3d5d9a",
+                "on-tertiary-fixed-variant": "#005237",
+                "on-tertiary-fixed": "#002114",
+                "on-primary": "#ffffff",
+                "surface-tint": "#005ac4",
+                "on-secondary-fixed": "#001a41",
+                "surface-container": "#efecff",
+                "on-error-container": "#93000a",
+                "surface-container-low": "#f5f2ff",
+                "surface-dim": "#dad7f3",
+                "surface-container-high": "#e8e5ff",
+                "surface-bright": "#fcf8ff",
+                "error-container": "#ffdad6",
+                "tertiary": "#003120",
+                "error": "#ba1a1a",
+                "tertiary-fixed": "#99f5c8",
+                "surface": "#fcf8ff",
+                "primary": "#00285f",
+                "on-secondary": "#ffffff",
+                "secondary-container": "#9cbbfe",
+                "inverse-surface": "#2f2e43",
+                "tertiary-container": "#004a32",
+                "on-primary-fixed-variant": "#004396",
+                "on-tertiary": "#ffffff",
+                "on-surface": "#1a1a2e",
+                "on-error": "#ffffff",
+                "outline-variant": "#c4c6d1",
+                "secondary-fixed": "#d8e2ff",
+                "primary-container": "#003d8a",
+                "outline": "#747781",
+                "on-primary-fixed": "#001a42",
+                "on-secondary-fixed-variant": "#234581",
+                "on-background": "#1a1a2e",
+                "on-primary-container": "#84acff",
+                "on-tertiary-container": "#62bd93",
+                "primary-fixed-dim": "#aec6ff",
+                "secondary-fixed-dim": "#adc6ff",
+                "background": "#fcf8ff",
+                "primary-fixed": "#d8e2ff",
+                "inverse-primary": "#aec6ff"
+              },
+              fontFamily: {
+                "headline": ["Manrope"],
+                "body": ["Inter"],
+                "label": ["Inter"],
+                "mono": ["JetBrains Mono"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-insight {
+            background: rgba(226, 224, 252, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopAppBar -->
+<header class="bg-[#00285f] dark:bg-[#001a3d] text-white font-['Manrope'] tracking-tight shadow-lg shadow-blue-900/20 docked full-width top-0 z-50">
+<div class="flex justify-between items-center w-full px-8 h-16 max-w-[1440px] mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-bold tracking-tighter text-white">ResumeIQ</span>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-blue-200/80 hover:text-white transition-colors text-sm font-medium" href="#">Dashboard</a>
+<a class="text-white border-b-2 border-[#99f5c8] pb-1 text-sm font-medium" href="#">Candidates</a>
+<a class="text-blue-200/80 hover:text-white transition-colors text-sm font-medium" href="#">Job Posts</a>
+<a class="text-blue-200/80 hover:text-white transition-colors text-sm font-medium" href="#">Analytics</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-3 mr-4 border-r border-white/10 pr-4">
+<a class="text-white/80 hover:text-white transition-all text-sm" href="#">How It Works</a>
+<a class="text-white/80 hover:text-white transition-all text-sm" href="#">For Recruiters</a>
+</div>
+<button class="material-symbols-outlined p-2 hover:bg-white/10 rounded-lg transition-all" data-icon="notifications">notifications</button>
+<button class="material-symbols-outlined p-2 hover:bg-white/10 rounded-lg transition-all" data-icon="settings">settings</button>
+<div class="w-8 h-8 rounded-full bg-secondary-container overflow-hidden border border-white/20">
+<img alt="User Profile Avatar" class="w-full h-full object-cover" data-alt="Corporate professional headshot for user profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXZjQv4qDb8iY7vx4xvWPJNkf_Wv2rnCnmD4muxls0E_GAm4SExhQ9ZpxyELdLk-n554qgDqCdR-E63Ll69nzzVHOyc-nqyEtGnVwAwUpcR7r6n0tNcg1-K7XGoFfhNGqE2gXFl0r3w3poHaf_nJZJXLnYMOKawNVpdVTLkLkrsihwl9wCB-he30Ymzt5CLgr3c-XzB44N7CZLvY94DjjbOardUSd_FuB8ZfoaENCHBDY3oEtQpCDxwCD4z-s_LPpmrhzjF12S0NDv"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Page Title Strip -->
+<section class="bg-surface-container-lowest border-b border-outline-variant/10">
+<div class="max-w-[1200px] mx-auto px-6 py-5 flex justify-between items-end">
+<div>
+<nav class="flex items-center gap-2 text-xs font-mono text-on-surface-variant uppercase tracking-widest mb-2">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<span class="material-symbols-outlined text-[10px]" data-icon="chevron_right">chevron_right</span>
+<span class="text-primary font-bold">Screen Resume</span>
+</nav>
+<h1 class="font-headline font-bold text-[28px] text-primary tracking-tight">New Screening</h1>
+</div>
+<div class="text-right">
+<p class="text-sm font-medium text-secondary">Step 1 of 1</p>
+<p class="text-xs text-on-surface-variant">— Upload &amp; Analyze</p>
+</div>
+</div>
+</section>
+<!-- Main Content Grid -->
+<main class="max-w-[1200px] mx-auto px-6 py-10">
+<div class="grid grid-cols-1 lg:grid-cols-10 gap-8 items-start">
+<!-- Left: Job Description Card -->
+<div class="lg:col-span-6 bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden border border-outline-variant/10">
+<div class="p-6 border-b border-outline-variant/5 flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary/5 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="work">work</span>
+</div>
+<div>
+<h2 class="font-headline font-bold text-lg text-primary">Job Description</h2>
+<p class="text-xs text-on-surface-variant">Provide context for the AI match engine</p>
+</div>
+</div>
+<div class="p-8 space-y-6">
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider">Job Title</label>
+<input class="w-full px-4 py-3 bg-surface-container-low border-transparent focus:border-secondary focus:ring-0 rounded-lg text-sm transition-all outline-none border-b-2 border-outline-variant/20" placeholder="e.g. Senior Software Engineer" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider">Company Name</label>
+<input class="w-full px-4 py-3 bg-surface-container-low border-transparent focus:border-secondary focus:ring-0 rounded-lg text-sm transition-all outline-none border-b-2 border-outline-variant/20" placeholder="e.g. Acme Tech Corp" type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider">Full JD Content</label>
+<textarea class="w-full h-[320px] p-4 bg-surface-container-low border-transparent focus:border-secondary focus:ring-0 rounded-lg text-sm transition-all outline-none border-b-2 border-outline-variant/20 resize-none font-body leading-relaxed" placeholder="Paste the job description here... include responsibilities, requirements, and benefits for better matching accuracy."></textarea>
+</div>
+</div>
+</div>
+<!-- Right: Resume Upload Card -->
+<div class="lg:col-span-4 space-y-6">
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden border border-outline-variant/10">
+<div class="p-6 border-b border-outline-variant/5 flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-secondary/5 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="cloud_upload">cloud_upload</span>
+</div>
+<div>
+<h2 class="font-headline font-bold text-lg text-primary">Resume Upload</h2>
+<p class="text-xs text-on-surface-variant">PDF, DOCX supported</p>
+</div>
+</div>
+<div class="p-8">
+<div class="w-full h-64 border-2 border-dashed border-secondary/30 bg-[#EBF2FF] rounded-xl flex flex-col items-center justify-center p-6 text-center group hover:border-secondary hover:bg-secondary/5 transition-all cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-white shadow-sm flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="upload_file">upload_file</span>
+</div>
+<p class="font-bold text-primary mb-1">Drag and drop resume</p>
+<p class="text-xs text-on-surface-variant mb-4">or <span class="text-secondary underline font-medium">browse your files</span></p>
+<div class="glass-insight px-3 py-1 rounded-full flex items-center gap-2">
+<span class="material-symbols-outlined text-[14px] text-on-tertiary-fixed-variant" data-icon="auto_awesome">auto_awesome</span>
+<span class="text-[10px] font-mono text-on-tertiary-fixed-variant font-bold">AI ENHANCED PARSING</span>
+</div>
+</div>
+<div class="mt-8 space-y-4">
+<div class="flex items-center gap-3 group">
+<div class="w-6 h-6 rounded-full bg-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px] text-on-tertiary-fixed-variant font-bold" data-icon="check">check</span>
+</div>
+<span class="text-sm font-medium text-on-surface-variant group-hover:text-primary transition-colors">Privacy Shield Active</span>
+</div>
+<div class="flex items-center gap-3 group">
+<div class="w-6 h-6 rounded-full bg-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px] text-on-tertiary-fixed-variant font-bold" data-icon="check">check</span>
+</div>
+<span class="text-sm font-medium text-on-surface-variant group-hover:text-primary transition-colors">Skill Extraction Enabled</span>
+</div>
+<div class="flex items-center gap-3 group">
+<div class="w-6 h-6 rounded-full bg-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px] text-on-tertiary-fixed-variant font-bold" data-icon="check">check</span>
+</div>
+<span class="text-sm font-medium text-on-surface-variant group-hover:text-primary transition-colors">Format Validation (PDF/DOCX)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- AI Insight Mini Card -->
+<div class="bg-primary-container p-6 rounded-xl relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl" data-icon="psychology">psychology</span>
+</div>
+<h3 class="font-headline font-bold text-white mb-2">Pro Tip</h3>
+<p class="text-on-primary-container text-xs leading-relaxed">Detailed job descriptions lead to 40% more accurate candidate scoring. Include specific tech stacks and soft skills.</p>
+</div>
+</div>
+</div>
+<!-- Action Section -->
+<div class="mt-12 flex flex-col items-center">
+<button class="flex items-center gap-3 bg-gradient-to-r from-primary to-primary-container text-white px-10 py-5 rounded-xl shadow-xl shadow-primary/20 hover:shadow-2xl hover:shadow-primary/30 transition-all hover:-translate-y-1 active:scale-95 group">
+<span class="material-symbols-outlined text-2xl group-hover:rotate-12 transition-transform" data-icon="bar_chart">bar_chart</span>
+<span class="font-headline font-extrabold text-lg tracking-tight">Analyze Resume with AI</span>
+</button>
+<p class="mt-4 text-xs font-mono text-on-surface-variant/60 uppercase tracking-widest">Processing takes approx. 4 seconds</p>
+</div>
+</main>
+<!-- SideNavBar (Mobile Triggered or Auxiliary) - Hidden based on Shell Visibility Logic but defined by JSON -->
+<aside class="hidden lg:flex fixed left-0 top-16 bottom-0 w-16 hover:w-64 bg-surface-container-low border-r-0 transition-all duration-300 group/nav z-40 overflow-hidden flex-col py-6 gap-4">
+<div class="flex flex-col gap-1">
+<a class="flex items-center h-12 px-4 gap-4 text-on-surface-variant hover:bg-white/50 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined shrink-0" data-icon="cloud_upload">cloud_upload</span>
+<span class="opacity-0 group-hover/nav:opacity-100 transition-opacity font-medium text-sm">Upload</span>
+</a>
+<a class="flex items-center h-12 px-4 gap-4 bg-white text-[#00285f] rounded-l-xl border-l-4 border-[#3d5d9a]" href="#">
+<span class="material-symbols-outlined shrink-0" data-icon="description">description</span>
+<span class="opacity-0 group-hover/nav:opacity-100 transition-opacity font-medium text-sm">Parser</span>
+</a>
+<a class="flex items-center h-12 px-4 gap-4 text-on-surface-variant hover:bg-white/50 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined shrink-0" data-icon="Fact_check">fact_check</span>
+<span class="opacity-0 group-hover/nav:opacity-100 transition-opacity font-medium text-sm">Match Score</span>
+</a>
+<a class="flex items-center h-12 px-4 gap-4 text-on-surface-variant hover:bg-white/50 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined shrink-0" data-icon="groups">groups</span>
+<span class="opacity-0 group-hover/nav:opacity-100 transition-opacity font-medium text-sm">Talent Pool</span>
+</a>
+<a class="flex items-center h-12 px-4 gap-4 text-on-surface-variant hover:bg-white/50 transition-transform duration-200 mt-auto" href="#">
+<span class="material-symbols-outlined shrink-0" data-icon="settings">settings</span>
+<span class="opacity-0 group-hover/nav:opacity-100 transition-opacity font-medium text-sm">Settings</span>
+</a>
+</div>
+</aside>
+</body></html>

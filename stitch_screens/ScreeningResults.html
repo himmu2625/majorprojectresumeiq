@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ResumeIQ - Screening Results</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@700&amp;family=DM+Sans:wght@700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-background": "#1a1a2e",
+              "secondary-fixed-dim": "#adc6ff",
+              "secondary-fixed": "#d8e2ff",
+              "tertiary-container": "#004a32",
+              "on-primary-fixed": "#001a42",
+              "primary-fixed-dim": "#aec6ff",
+              "primary-fixed": "#d8e2ff",
+              "tertiary": "#003120",
+              "surface-container-lowest": "#ffffff",
+              "surface-container": "#efecff",
+              "surface-variant": "#e2e0fc",
+              "error": "#ba1a1a",
+              "surface-tint": "#005ac4",
+              "surface-container-highest": "#e2e0fc",
+              "on-surface-variant": "#434750",
+              "on-secondary": "#ffffff",
+              "secondary": "#3d5d9a",
+              "inverse-primary": "#aec6ff",
+              "error-container": "#ffdad6",
+              "on-error-container": "#93000a",
+              "surface-container-high": "#e8e5ff",
+              "surface-bright": "#fcf8ff",
+              "on-secondary-container": "#284a85",
+              "surface-dim": "#dad7f3",
+              "surface": "#fcf8ff",
+              "on-primary": "#ffffff",
+              "secondary-container": "#9cbbfe",
+              "on-secondary-fixed": "#001a41",
+              "outline-variant": "#c4c6d1",
+              "background": "#fcf8ff",
+              "primary-container": "#003d8a",
+              "on-surface": "#1a1a2e",
+              "on-secondary-fixed-variant": "#234581",
+              "primary": "#00285f",
+              "outline": "#747781",
+              "on-primary-fixed-variant": "#004396",
+              "on-error": "#ffffff",
+              "surface-container-low": "#f5f2ff",
+              "on-tertiary": "#ffffff",
+              "tertiary-fixed-dim": "#7dd8ad",
+              "inverse-surface": "#2f2e43",
+              "inverse-on-surface": "#f2efff",
+              "on-primary-container": "#84acff",
+              "on-tertiary-container": "#62bd93",
+              "tertiary-fixed": "#99f5c8",
+              "on-tertiary-fixed-variant": "#005237",
+              "on-tertiary-fixed": "#002114"
+            },
+            fontFamily: {
+              "headline": ["Manrope", "DM Sans", "sans-serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Inter", "sans-serif"],
+              "mono": ["JetBrains Mono", "monospace"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .filled-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+        .donut-chart {
+            background: conic-gradient(var(--tw-tertiary-fixed) 0% 74%, var(--tw-surface-variant) 74% 100%);
+        }
+    </style>
+</head>
+<body class="bg-[#F5F7FA] font-body text-on-surface">
+<!-- Top Navigation Anchor -->
+<header class="bg-surface-container-lowest sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-[1440px] mx-auto">
+<!-- Left: Back Action -->
+<div class="flex items-center gap-2 group cursor-pointer">
+<span class="material-symbols-outlined text-primary group-hover:-translate-x-1 transition-transform">arrow_back</span>
+<span class="font-label font-semibold text-primary">Back to Upload</span>
+</div>
+<!-- Center: Title -->
+<h1 class="font-headline text-[28px] font-bold text-on-surface tracking-tight">Screening Results</h1>
+<!-- Right: Actions -->
+<div class="flex items-center gap-4">
+<button class="px-5 py-2.5 rounded-xl border-2 border-outline-variant text-primary font-semibold hover:bg-surface-container-low transition-all">
+                    Download Report
+                </button>
+<button class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed font-bold shadow-sm hover:opacity-90 active:scale-95 transition-all">
+<span class="material-symbols-outlined filled-icon" style="font-variation-settings: 'FILL' 1;">star</span>
+                    Shortlist Candidate
+                </button>
+</div>
+</div>
+</header>
+<main class="max-w-[1440px] mx-auto px-8 py-8 space-y-8">
+<!-- TOP ROW: Metric Cards -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<!-- Overall Match Score (Bento Focus) -->
+<div class="bg-surface-container-lowest p-6 rounded-xl flex flex-col items-center justify-center text-center ring-1 ring-outline-variant/10 shadow-sm">
+<span class="text-on-surface-variant text-xs font-bold uppercase tracking-widest mb-4">Overall Match Score</span>
+<div class="relative w-32 h-32 flex items-center justify-center rounded-full donut-chart">
+<div class="absolute w-28 h-28 bg-surface-container-lowest rounded-full flex flex-col items-center justify-center">
+<span class="font-mono text-4xl font-bold text-on-surface">74%</span>
+</div>
+</div>
+<div class="mt-4 px-3 py-1 bg-tertiary-fixed/30 text-on-tertiary-fixed-variant rounded-full text-xs font-bold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-fixed-variant"></span>
+                    High Confidence
+                </div>
+</div>
+<!-- Skills Match -->
+<div class="bg-surface-container-lowest p-6 rounded-xl flex flex-col justify-between ring-1 ring-outline-variant/10 shadow-sm">
+<div>
+<span class="text-on-surface-variant text-xs font-bold uppercase tracking-widest block mb-2">Skills Match</span>
+<span class="font-mono text-3xl font-bold text-on-surface">78%</span>
+</div>
+<div class="w-full h-2 bg-surface-variant rounded-full overflow-hidden mt-6">
+<div class="h-full bg-tertiary-fixed-dim" style="width: 78%"></div>
+</div>
+</div>
+<!-- Experience Match -->
+<div class="bg-surface-container-lowest p-6 rounded-xl flex flex-col justify-between ring-1 ring-outline-variant/10 shadow-sm">
+<div>
+<span class="text-on-surface-variant text-xs font-bold uppercase tracking-widest block mb-2">Experience Match</span>
+<span class="font-mono text-3xl font-bold text-on-surface">71%</span>
+</div>
+<div class="w-full h-2 bg-surface-variant rounded-full overflow-hidden mt-6">
+<div class="h-full bg-secondary" style="width: 71%"></div>
+</div>
+</div>
+<!-- Education Match -->
+<div class="bg-surface-container-lowest p-6 rounded-xl flex flex-col justify-between ring-1 ring-outline-variant/10 shadow-sm">
+<div>
+<span class="text-on-surface-variant text-xs font-bold uppercase tracking-widest block mb-2">Education Match</span>
+<span class="font-mono text-3xl font-bold text-on-surface">62%</span>
+</div>
+<div class="w-full h-2 bg-surface-variant rounded-full overflow-hidden mt-6">
+<div class="h-full bg-on-tertiary-container" style="width: 62%"></div>
+</div>
+</div>
+</div>
+<!-- MAIN CONTENT (60/40) -->
+<div class="grid grid-cols-1 lg:grid-cols-10 gap-8 items-start">
+<!-- LEFT COLUMN (60%) -->
+<div class="lg:col-span-6 space-y-8">
+<!-- Skills Analysis Card -->
+<section class="bg-surface-container-lowest p-8 rounded-xl ring-1 ring-outline-variant/10 shadow-sm">
+<h3 class="font-headline text-xl font-bold mb-6 text-primary">Skills Analysis</h3>
+<div class="space-y-6">
+<div>
+<span class="text-xs font-bold text-on-surface-variant uppercase tracking-widest block mb-3">Matched Skills</span>
+<div class="flex flex-wrap gap-2">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant px-3 py-1.5 rounded text-sm font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">check</span> Python
+                                </span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant px-3 py-1.5 rounded text-sm font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">check</span> REST API
+                                </span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant px-3 py-1.5 rounded text-sm font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">check</span> Machine Learning
+                                </span>
+</div>
+</div>
+<div>
+<span class="text-xs font-bold text-on-surface-variant uppercase tracking-widest block mb-3">Missing Skills</span>
+<div class="flex flex-wrap gap-2">
+<span class="bg-error-container text-on-error-container px-3 py-1.5 rounded text-sm font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">close</span> Kubernetes
+                                </span>
+<span class="bg-error-container text-on-error-container px-3 py-1.5 rounded text-sm font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">close</span> AWS
+                                </span>
+<span class="bg-error-container text-on-error-container px-3 py-1.5 rounded text-sm font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">close</span> Docker
+                                </span>
+</div>
+</div>
+</div>
+</section>
+<!-- XAI Explanation Card -->
+<section class="bg-surface-variant/40 backdrop-blur-md p-8 rounded-xl border border-white/20 shadow-sm relative overflow-hidden">
+<div class="flex justify-between items-start mb-6">
+<h3 class="font-headline text-xl font-bold text-primary">Why This Score?</h3>
+<span class="bg-primary/5 text-primary-container px-2.5 py-1 rounded text-[10px] font-bold tracking-tight border border-primary/10 font-mono">
+                            Powered by SHAP Explainability
+                        </span>
+</div>
+<p class="text-on-surface-variant leading-relaxed mb-8">
+                        The candidate demonstrates strong alignment with the technical core of the role, specifically in backend engineering and algorithmic logic. The 74% score is weighted heavily by a 5-year tenure at a Tier-1 tech firm, though lack of direct Cloud Infrastructure exposure slightly suppresses the total match.
+                    </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-4">
+<span class="text-xs font-bold text-on-tertiary-fixed-variant uppercase tracking-widest flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-fixed-variant"></span>
+                                Top Matching Factors
+                            </span>
+<ul class="space-y-3">
+<li class="text-sm font-medium flex items-center gap-3">
+<span class="w-1 h-1 bg-on-tertiary-fixed-variant rounded-full"></span>
+                                    Seniority level matches Senior Engineer requirements
+                                </li>
+<li class="text-sm font-medium flex items-center gap-3">
+<span class="w-1 h-1 bg-on-tertiary-fixed-variant rounded-full"></span>
+                                    Strong overlap in ML Frameworks (Scikit-learn, PyTorch)
+                                </li>
+<li class="text-sm font-medium flex items-center gap-3">
+<span class="w-1 h-1 bg-on-tertiary-fixed-variant rounded-full"></span>
+                                    Previous experience in high-scale SaaS environments
+                                </li>
+</ul>
+</div>
+<div class="space-y-4">
+<span class="text-xs font-bold text-on-error-container uppercase tracking-widest flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-on-error-container"></span>
+                                Key Missing Factors
+                            </span>
+<ul class="space-y-3">
+<li class="text-sm font-medium flex items-center gap-3">
+<span class="w-1 h-1 bg-on-error-container rounded-full"></span>
+                                    No explicit mention of Kubernetes orchestration
+                                </li>
+<li class="text-sm font-medium flex items-center gap-3">
+<span class="w-1 h-1 bg-on-error-container rounded-full"></span>
+                                    Missing AWS Certified Solutions Architect credential
+                                </li>
+</ul>
+</div>
+</div>
+</section>
+</div>
+<!-- RIGHT COLUMN (40%) -->
+<div class="lg:col-span-4 space-y-8">
+<!-- Section Breakdown -->
+<section class="bg-surface-container-lowest p-8 rounded-xl ring-1 ring-outline-variant/10 shadow-sm">
+<h3 class="font-headline text-lg font-bold mb-6 text-on-surface">Section Breakdown</h3>
+<div class="space-y-6">
+<!-- Skills -->
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-bold text-on-surface-variant uppercase">
+<span>Skills</span>
+<span class="font-mono text-primary">78%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 78%"></div>
+</div>
+</div>
+<!-- Experience -->
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-bold text-on-surface-variant uppercase">
+<span>Experience</span>
+<span class="font-mono text-primary">71%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 71%"></div>
+</div>
+</div>
+<!-- Education -->
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-bold text-on-surface-variant uppercase">
+<span>Education</span>
+<span class="font-mono text-primary">62%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 62%"></div>
+</div>
+</div>
+<!-- Summary -->
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-bold text-on-surface-variant uppercase">
+<span>Summary Impact</span>
+<span class="font-mono text-primary">55%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 55%"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Top Improvements -->
+<section class="space-y-4">
+<h3 class="font-headline text-lg font-bold text-on-surface px-2">Top Improvements</h3>
+<div class="space-y-3">
+<div class="bg-surface-container-low p-4 rounded-lg flex items-center gap-4 border border-outline-variant/5">
+<div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold font-mono text-xs">1</div>
+<span class="font-semibold text-primary text-sm">Add Cloud Infrastructure Skills</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg flex items-center gap-4 border border-outline-variant/5">
+<div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold font-mono text-xs">2</div>
+<span class="font-semibold text-primary text-sm">Quantify Machine Learning impact</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg flex items-center gap-4 border border-outline-variant/5">
+<div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold font-mono text-xs">3</div>
+<span class="font-semibold text-primary text-sm">Update Certification dates</span>
+</div>
+</div>
+</section>
+<!-- Candidate Info Panel -->
+<section class="bg-on-surface text-surface-container-lowest p-6 rounded-xl shadow-lg">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-secondary-container">description</span>
+<h4 class="font-bold">Candidate File Info</h4>
+</div>
+<div class="space-y-4 text-sm opacity-90">
+<div class="flex justify-between items-center py-2 border-b border-white/10">
+<span>Filename</span>
+<span class="font-mono text-[11px] truncate max-w-[150px]">Alex_Chen_CV_2024.pdf</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b border-white/10">
+<span>Word Count</span>
+<span class="font-mono">842 words</span>
+</div>
+<div class="pt-2 space-y-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-fixed text-sm">check_circle</span>
+<span>Contact Details Found</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-fixed text-sm">check_circle</span>
+<span>Experience Parsed</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-fixed text-sm">check_circle</span>
+<span>Skills Vectorized</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- Side Navigation Anchor (Hidden on screen but structure for Shell) -->
+<nav class="hidden">
+<div class="style_shell_layout">
+<!-- Overridden by page-specific content focused design -->
+</div>
+</nav>
+</body></html>

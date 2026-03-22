@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ResumeIQ - Recruiter Workspace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-container": "#004a32",
+              "on-secondary-container": "#284a85",
+              "secondary": "#3d5d9a",
+              "on-primary-fixed": "#001a42",
+              "on-secondary": "#ffffff",
+              "on-error-container": "#93000a",
+              "surface-variant": "#e2e0fc",
+              "surface-tint": "#005ac4",
+              "outline": "#747781",
+              "on-surface": "#1a1a2e",
+              "error": "#ba1a1a",
+              "surface-dim": "#dad7f3",
+              "on-primary-fixed-variant": "#004396",
+              "surface": "#fcf8ff",
+              "surface-container-highest": "#e2e0fc",
+              "outline-variant": "#c4c6d1",
+              "inverse-primary": "#aec6ff",
+              "inverse-on-surface": "#f2efff",
+              "on-background": "#1a1a2e",
+              "background": "#fcf8ff",
+              "surface-bright": "#fcf8ff",
+              "primary-container": "#003d8a",
+              "inverse-surface": "#2f2e43",
+              "on-primary": "#ffffff",
+              "tertiary": "#003120",
+              "error-container": "#ffdad6",
+              "tertiary-fixed-dim": "#7dd8ad",
+              "secondary-container": "#9cbbfe",
+              "on-surface-variant": "#434750",
+              "on-secondary-fixed": "#001a41",
+              "on-error": "#ffffff",
+              "tertiary-fixed": "#99f5c8",
+              "on-tertiary-fixed": "#002114",
+              "surface-container": "#efecff",
+              "surface-container-low": "#f5f2ff",
+              "on-tertiary-fixed-variant": "#005237",
+              "primary-fixed-dim": "#aec6ff",
+              "primary": "#00285f",
+              "secondary-fixed": "#d8e2ff",
+              "on-primary-container": "#84acff",
+              "on-tertiary-container": "#62bd93",
+              "on-tertiary": "#ffffff",
+              "on-secondary-fixed-variant": "#234581",
+              "secondary-fixed-dim": "#adc6ff",
+              "primary-fixed": "#d8e2ff",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-high": "#e8e5ff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"],
+              "mono": ["JetBrains Mono"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px);
+      }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased flex min-h-screen">
+<!-- SideNavBar (Authority: Shared Components JSON) -->
+<aside class="h-screen w-64 fixed left-0 top-0 border-r-0 bg-slate-50 dark:bg-slate-900 flex flex-col py-6 z-50">
+<div class="px-6 mb-8">
+<h1 class="text-xl font-bold tracking-tight text-[#00285f] dark:text-white font-headline">Cognitive Architect</h1>
+<p class="text-xs text-on-surface-variant/70 uppercase tracking-widest font-semibold mt-1">Recruitment Intelligence</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-6 py-3 text-[#00285f] dark:text-white font-bold border-l-4 border-[#3d5d9a] bg-slate-100 dark:bg-slate-800 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 text-slate-500 dark:text-slate-400 hover:text-[#00285f] dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="work">work</span>
+<span class="font-label">Job Openings</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 text-slate-500 dark:text-slate-400 hover:text-[#00285f] dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-label">Candidates</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 text-slate-500 dark:text-slate-400 hover:text-[#00285f] dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="font-label">Screening History</span>
+</a>
+</nav>
+<div class="px-4 mt-auto space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-[#00285f] dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label">Settings</span>
+</a>
+<div class="mt-6 pt-6 border-t border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3 px-2">
+<img alt="Priya Sharma Profile" class="w-10 h-10 rounded-full object-cover" data-alt="Professional headshot of a female HR recruiter" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0xg5KDUyxEXsl6lTiT5ZWNBkwimgX5e8CIt3gXH9Vroto5rqN-Md1UHE2zDclbNY44nTBhBVDPEhQKGBnE8jM1erSjsYTR5rEqP4jEHFATjwH0U2Xmddl7GKNwnNQwuxfb258VZ7c9BqUjwdZL1QG7-lif7-ycELmCbm4MHANoqJVTJ4AK6f1bjJkqyGcSGXO9ThA0sJHujYn_gMSvXPzUt4v9WFRwgDIF09CS2Z5z4nUZ4U7951C0T_pWhhAhSBQrcVfOHhyNONR"/>
+<div>
+<p class="text-sm font-bold text-on-surface">Priya Sharma</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-tighter">HR Recruiter</p>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 flex-1 flex flex-col bg-surface overflow-x-hidden pb-12">
+<!-- TopAppBar (Authority: Shared Components JSON) -->
+<header class="sticky top-0 z-40 w-full bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl flex justify-between items-center h-16 px-8 border-b border-slate-100 dark:border-slate-800/50">
+<div class="flex items-center gap-8">
+<div class="relative group">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant material-symbols-outlined" data-icon="search">search</span>
+<input class="bg-surface-container-low border-none rounded-lg pl-10 pr-4 py-1.5 text-sm w-64 focus:ring-2 focus:ring-secondary/20 transition-all" placeholder="Search resumes..." type="text"/>
+</div>
+<nav class="hidden md:flex gap-6 text-sm font-medium">
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#3d5d9a] dark:hover:text-slate-200" href="#">Analytics</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#3d5d9a] dark:hover:text-slate-200" href="#">Reports</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#3d5d9a] dark:hover:text-slate-200" href="#">Team</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-primary-container transition-all active:scale-95">Invite Member</button>
+<div class="flex items-center gap-2">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container rounded-full transition-all">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container rounded-full transition-all">
+<span class="material-symbols-outlined" data-icon="dark_mode">dark_mode</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Content Area -->
+<div class="px-8 pt-8">
+<!-- Breadcrumbs -->
+<div class="flex items-center gap-2 text-xs text-on-surface-variant mb-4 uppercase tracking-widest font-bold">
+<span>Dashboard</span>
+<span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+<span class="text-secondary">Senior Backend Engineer</span>
+</div>
+<!-- Header Row -->
+<div class="flex justify-between items-end mb-8">
+<div>
+<h2 class="text-4xl font-extrabold text-primary font-headline tracking-tight">Senior Backend Engineer</h2>
+<p class="text-on-surface-variant mt-1 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="description">description</span>
+                        23 candidates screened this week
+                    </p>
+</div>
+<button class="flex items-center gap-2 bg-gradient-to-br from-primary to-primary-container text-white px-6 py-3 rounded-xl font-bold shadow-lg shadow-primary/20 active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="upload">upload</span>
+                    Upload More Resumes
+                </button>
+</div>
+<!-- Stats Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
+<div class="bg-surface-container-low p-6 rounded-xl transition-all hover:bg-surface-container-high border-none">
+<p class="text-xs font-bold text-on-surface-variant uppercase tracking-widest mb-1">Total Screened</p>
+<h3 class="text-3xl font-black text-primary font-headline">23</h3>
+<div class="mt-4 flex items-center text-xs text-tertiary font-bold">
+<span class="material-symbols-outlined text-sm mr-1" data-icon="trending_up">trending_up</span>
+                        +12% vs last job
+                    </div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl transition-all hover:bg-surface-container-high border-none">
+<p class="text-xs font-bold text-on-surface-variant uppercase tracking-widest mb-1">Average Score</p>
+<div class="flex items-baseline gap-1">
+<h3 class="text-3xl font-black text-primary font-headline font-mono">61</h3>
+<span class="text-lg font-bold text-primary/60">%</span>
+</div>
+<div class="w-full bg-outline-variant/30 h-1.5 rounded-full mt-5">
+<div class="bg-secondary h-full rounded-full w-[61%]"></div>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl transition-all hover:bg-surface-container-high border-none">
+<p class="text-xs font-bold text-on-surface-variant uppercase tracking-widest mb-1">Shortlisted</p>
+<h3 class="text-3xl font-black text-primary font-headline">05</h3>
+<div class="flex -space-x-2 mt-4">
+<img alt="User 1" class="w-7 h-7 rounded-full border-2 border-surface-container-low object-cover" data-alt="Candidate avatar thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaod194mKshv6NRXxwFEIy6bhzFWWb1ZXxbUeKQQ1st1P8qLmtTwYbUk_M6NwDX3HU4fJXbQcXQanL5Nel55iPy22NlL_aVUmx1_z8BUE-kU5G5QTjc4S-DdSted4m055LXrYQqV2sfp2wnJc4RNP0GV0Wz7mkGxzu1ZNBZPiW-IFl9MK-66kgDuDe7tfaYmJffoaHlzeAHvIJSjbIIqvBVIc7EP5H_vWCw6Dly-BTmuiYMe9Sc1mKxgytWDspoB3h-mo0VXkc8QYe"/>
+<img alt="User 2" class="w-7 h-7 rounded-full border-2 border-surface-container-low object-cover" data-alt="Candidate avatar thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCbU3Qja1oav1IoauxKdmaE4MwKokm1ciN1z0_dfF8JCi7OYLh6mW1rcHuUxPiVRTl4YLFADWt6Rvjv6ayKuX50S-bSRAfcnBEV2hMa3QfWyJuT-d8uLs_wo_wYw4vD9ZTxwWthesrkIPhqxlr3jPVvzFinYMvFzSx_YfE4e_YH9jTcCqSHBhCzRwbuWBi7AwuIxua4zAT0Ez1CDPjTzU5uCnxB5skjJuzl1-sA1yRfZ5l9UGBUuqAGlkHiQUXj1uUM-Nw2D458gbv"/>
+<img alt="User 3" class="w-7 h-7 rounded-full border-2 border-surface-container-low object-cover" data-alt="Candidate avatar thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDx3xNq0toxpbRRbFE_i3RQ_vh0eudITOHaL8Qgp6Q6jQiP8k-cHjDso21vJ_N3LoQHuNEbKxAvZN6XiIngUb4l-eK7cEF9mT9OtVvg5_aPzGlMEMiaZu6d4JZvozrwuW62xj9D8h_mmmVEEfbH2wb84UNnPtkNlACANr_8IK7aX97192AXYL9hSalYFpdHjcy4AFpU2XdebMbnfzCocfQnPkAZsFgIAfxCf-ko1XwmH8x7onm9HMkcAoE4a7p-peXus81lAalwIJq4"/>
+<div class="w-7 h-7 rounded-full bg-primary-container text-[10px] text-white flex items-center justify-center border-2 border-surface-container-low font-bold">+2</div>
+</div>
+</div>
+<div class="bg-primary text-white p-6 rounded-xl shadow-xl shadow-primary/20 relative overflow-hidden">
+<div class="absolute -right-4 -top-4 opacity-10">
+<span class="material-symbols-outlined text-8xl" data-icon="verified">verified</span>
+</div>
+<p class="text-xs font-bold text-white/70 uppercase tracking-widest mb-1">Top Score</p>
+<div class="flex items-baseline gap-1">
+<h3 class="text-3xl font-black font-mono">84</h3>
+<span class="text-lg font-bold opacity-60">%</span>
+</div>
+<p class="text-xs mt-4 font-medium italic">"Rahul Sharma" matches 9/10 core skills</p>
+</div>
+</div>
+<!-- Filter Bar -->
+<div class="flex flex-wrap items-center justify-between gap-4 mb-6 bg-surface-container-low p-4 rounded-xl">
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-3">
+<span class="text-xs font-bold text-on-surface-variant whitespace-nowrap uppercase">Show above: 60%</span>
+<input class="w-32 accent-secondary bg-outline-variant/30 h-1.5 rounded-lg appearance-none cursor-pointer" type="range"/>
+</div>
+<div class="h-6 w-px bg-outline-variant/30"></div>
+<div class="flex items-center gap-2">
+<button class="px-4 py-1.5 bg-white text-primary text-sm font-bold rounded-lg shadow-sm">All</button>
+<button class="px-4 py-1.5 text-on-surface-variant text-sm font-medium hover:text-primary transition-all">Shortlisted</button>
+<button class="px-4 py-1.5 text-on-surface-variant text-sm font-medium hover:text-primary transition-all">To Review</button>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-2 px-3 py-1.5 bg-white rounded-lg border border-outline-variant/10 text-xs font-semibold text-on-surface-variant cursor-pointer">
+                        Sort by: Highest Score
+                        <span class="material-symbols-outlined text-sm" data-icon="expand_more">expand_more</span>
+</div>
+<button class="flex items-center gap-2 px-4 py-1.5 bg-white border border-outline-variant/20 text-on-surface-variant text-xs font-bold rounded-lg hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="file_download">file_download</span>
+                        Export CSV
+                    </button>
+</div>
+</div>
+<!-- Candidate Table -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm">
+<table class="w-full border-collapse">
+<thead>
+<tr class="bg-surface-container-low/50 text-left">
+<th class="px-6 py-4 text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Candidate Name</th>
+<th class="px-6 py-4 text-[10px] font-bold text-on-surface-variant uppercase tracking-widest text-center">AI Score</th>
+<th class="px-6 py-4 text-[10px] font-bold text-on-surface-variant uppercase tracking-widest text-center">Technical</th>
+<th class="px-6 py-4 text-[10px] font-bold text-on-surface-variant uppercase tracking-widest text-center">Cultural</th>
+<th class="px-6 py-4 text-[10px] font-bold text-on-surface-variant uppercase tracking-widest text-center">Experience</th>
+<th class="px-6 py-4 text-[10px] font-bold text-on-surface-variant uppercase tracking-widest text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<!-- Row 1 -->
+<tr class="group hover:bg-surface-container-low/30 transition-all">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-secondary-fixed flex items-center justify-center text-primary font-black text-sm">RS</div>
+<div>
+<p class="font-bold text-on-surface group-hover:text-primary transition-colors">Rahul Sharma</p>
+<p class="text-xs text-on-surface-variant">5.5 Years Exp • Bangalore</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5 text-center">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant text-[11px] font-black px-3 py-1 rounded-sm font-mono tracking-tight">84% MATCH</span>
+</td>
+<td class="px-6 py-5 text-center font-mono font-bold text-sm text-on-surface-variant">91%</td>
+<td class="px-6 py-5 text-center font-mono font-bold text-sm text-on-surface-variant">79%</td>
+<td class="px-6 py-5 text-center font-mono font-bold text-sm text-on-surface-variant">88%</td>
+<td class="px-6 py-5 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="p-2 text-tertiary hover:bg-tertiary/10 rounded-full transition-all">
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+<button class="material-symbols-outlined p-2 text-on-surface-variant hover:bg-surface-container rounded-full" data-icon="more_vert">more_vert</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="group hover:bg-surface-container-low/30 transition-all">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-variant flex items-center justify-center text-primary font-black text-sm">PM</div>
+<div>
+<p class="font-bold text-on-surface group-hover:text-primary transition-colors">Priya Mehta</p>
+<p class="text-xs text-on-surface-variant">4 Years Exp • Mumbai</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5 text-center">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant text-[11px] font-black px-3 py-1 rounded-sm font-mono tracking-tight">76% MATCH</span>
+</td>
+<td class="px-6 py-5 text-center font-mono font-bold text-sm text-on-surface-variant">82%</td>
+<td class="px-6 py-5 text-center font-mono font-bold text-sm text-on-surface-variant">71%</td>
+<td class="px-6 py-5 text-center font-mono font-bold text-sm text-on-surface-variant">79%</td>
+<td class="px-6 py-5 text-right">
+<div class="flex items-center justify-end gap-2">
+<span class="text-[10px] font-bold text-secondary uppercase tracking-tighter bg-secondary-fixed/30 px-2 py-0.5 rounded">To Review</span>
+<button class="material-symbols-outlined p-2 text-on-surface-variant hover:bg-surface-container rounded-full" data-icon="more_vert">more_vert</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="group hover:bg-surface-container-low/30 transition-all">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-secondary-fixed flex items-center justify-center text-primary font-black text-sm">AK</div>
+<div>
+<p class="font-bold text-on-surface group-hover:text-primary transition-colors">Amit Kumar</p>
+<p class="text-xs text-on-surface-variant">6.2 Years Exp • Delhi</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5 text-center">
+<span class="bg-orange-100 text-orange-700 text-[11px] font-black px-3 py-1 rounded-sm font-mono tracking-tight">62% MATCH</span>
+</td>
+<td class="px-6 py-5 text-center font-mono font-bold text-sm text-on-surface-variant">70%</td>
+<td class="px-6 py-5 text-center font-mono font-bold text-sm text-on-surface-variant">58%</td>
+<td class="px-6 py-5 text-center font-mono font-bold text-sm text-on-surface-variant">65%</td>
+<td class="px-6 py-5 text-right">
+<div class="flex items-center justify-end gap-2">
+<span class="text-[10px] font-bold text-secondary uppercase tracking-tighter bg-secondary-fixed/30 px-2 py-0.5 rounded">To Review</span>
+<button class="material-symbols-outlined p-2 text-on-surface-variant hover:bg-surface-container rounded-full" data-icon="more_vert">more_vert</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="group hover:bg-surface-container-low/30 transition-all">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-variant flex items-center justify-center text-primary font-black text-sm">SP</div>
+<div>
+<p class="font-bold text-on-surface group-hover:text-primary transition-colors">Sneha Patel</p>
+<p class="text-xs text-on-surface-variant">3.5 Years Exp • Pune</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5 text-center">
+<span class="bg-orange-100 text-orange-700 text-[11px] font-black px-3 py-1 rounded-sm font-mono tracking-tight">58% MATCH</span>
+</td>
+<td class="px-6 py-5 text-center font-mono font-bold text-sm text-on-surface-variant">65%</td>
+<td class="px-6 py-5 text-center font-mono font-bold text-sm text-on-surface-variant">55%</td>
+<td class="px-6 py-5 text-center font-mono font-bold text-sm text-on-surface-variant">60%</td>
+<td class="px-6 py-5 text-right">
+<div class="flex items-center justify-end gap-2">
+<span class="text-[10px] font-bold text-secondary uppercase tracking-tighter bg-secondary-fixed/30 px-2 py-0.5 rounded">To Review</span>
+<button class="material-symbols-outlined p-2 text-on-surface-variant hover:bg-surface-container rounded-full" data-icon="more_vert">more_vert</button>
+</div>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="group hover:bg-surface-container-low/30 transition-all">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-secondary-fixed flex items-center justify-center text-primary font-black text-sm">VS</div>
+<div>
+<p class="font-bold text-on-surface group-hover:text-primary transition-colors">Vikram Singh</p>
+<p class="text-xs text-on-surface-variant">8 Years Exp • Remote</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5 text-center">
+<span class="bg-error-container text-on-error-container text-[11px] font-black px-3 py-1 rounded-sm font-mono tracking-tight">34% MATCH</span>
+</td>
+<td class="px-6 py-5 text-center font-mono font-bold text-sm text-on-surface-variant">40%</td>
+<td class="px-6 py-5 text-center font-mono font-bold text-sm text-on-surface-variant">29%</td>
+<td class="px-6 py-5 text-center font-mono font-bold text-sm text-on-surface-variant">35%</td>
+<td class="px-6 py-5 text-right">
+<div class="flex items-center justify-end gap-2">
+<span class="text-[10px] font-bold text-on-error-container uppercase tracking-tighter bg-error-container/50 px-2 py-0.5 rounded">Rejected</span>
+<button class="material-symbols-outlined p-2 text-on-surface-variant hover:bg-surface-container rounded-full" data-icon="more_vert">more_vert</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Shortlist Panel Floating Footer -->
+<div class="fixed bottom-8 left-[calc(16rem+2rem)] right-8 glass-card border border-white/40 p-5 rounded-2xl shadow-2xl flex items-center justify-between z-40">
+<div class="flex items-center gap-6">
+<div class="pr-6 border-r border-outline-variant/30">
+<p class="text-xs font-black text-primary uppercase tracking-widest mb-1">Shortlisted (5)</p>
+<div class="flex items-center gap-1.5">
+<img alt="S1" class="w-8 h-8 rounded-full border-2 border-white object-cover" data-alt="Small candidate profile photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsVpSCXz_PbjbPBj1c-gQIiBTVDMGkn2VCDD74KzloOfouAxhQM11OJ3yPh0u04GLsH0goYLvggN6ir_N8kPlLiP22OsnTLcHSJ0ZZsBrvByFfXJq5STkWwuDPId0wCBvkUFLZtMGY7gW_xAw62E7e2N3ZYmQVpCFOBQa2rTM45fX258W3GQ2_hMHPqCBjhEETG1gGbAWNxRjjvCErX9Pqh1LbtDyWsxiVzvHrLYNMTMejweCT_mN_AZjSZnBkS8hTfwjhUoJekpzy"/>
+<img alt="S2" class="w-8 h-8 rounded-full border-2 border-white object-cover" data-alt="Small candidate profile photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAk5VIywJmFH8s2IElzBNaQNWNw5-a1L3XOMcLivlfTAH-3d5M2BVC22tuSYEnlBkYeUIiXwf-c7Y33dAUdiei3EyeuXnUROYMYBKjr5hfyCGBbbz9njT_SWPcjB8H4JVzgD-sJb6rsvccwFNHo2wZ_iRd1yzFo8lXstucgI67lhVbfllxpdcC79nSks7ys2dTalpthYnBAegXiaMOvo0j8seLF9A9woOEVIpNUJ9p1jE4mgTM_Bq3ZF7CR7J4QmHXw5nYvhr0Ji6bs"/>
+<img alt="S3" class="w-8 h-8 rounded-full border-2 border-white object-cover" data-alt="Small candidate profile photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT1Sq3VBnad1NugZginurltAjjfah-5HQAheyc-5qDpTobUTmJC1tZAItzHUBtdKIRAy3eLFkBk_MboD77PINd3Bd_fQKkykKTYwzdurJIhNNGwYEjL3zmrC2KNuPVZBQOedue69fLokMQt0rfruUGCARychP_gK3xlPHu6kd5Hz4epFA58kZtLf97ocqCzi1HJ_mtUEBg-3iX1F77KCSY7u8821vdSEDhWsUBI169uSDxGF2CCsGzXNGjZkY6fAfFaHo3BptcvZrn"/>
+<img alt="S4" class="w-8 h-8 rounded-full border-2 border-white object-cover" data-alt="Small candidate profile photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC35DeoL0Qa2B4Sz7P7w3FJ64Qc_4LcYHpNJZmAIG6IIQ4k0Ph5RB7UbZ9d1CuVwAzC7RP-qnvXL_2FIeycIyizZRbds0ZUyWEfALM2PWUPd1g_ryZVsKfnWZWCWO6EsAByuMHU2loalEe0enpPQn6Op_FugHJx9brzrEGcbt8QLxB-Wxxew5DLMjUnKf9Lq1c0_g7gC5Pd-sFncCs0gqu6KlSdUsA1e481qiLr7_qQqappZcSPPxibct_kFbQSmWzHydgCMWyeB_KH"/>
+<img alt="S5" class="w-8 h-8 rounded-full border-2 border-white object-cover" data-alt="Small candidate profile photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEs2busBzV9TW84eqG8MXKDdI6Ajff6ddBD61hG2uYmOF0axOPNAo88WlVzy2N28Jw5bh_--YhNmn_eMYUQP1eHU85BOA2Zto6w9zm7gqmflAIkJGPNkNf-nIPiwgfEbSAgGY3r1feETHURqhlvioLrEPRAaZCXoL8scuI8azkvDlFgbC72yeVNErJ0W8ORZbT-i10sQwHzD-7vnpGngbamtjr9gCUj5APQbFvbw0lLdzC1qhj1Ld2lIFXdn5VAa6NQqrn9ND1Euue"/>
+</div>
+</div>
+<div>
+<p class="text-[10px] text-on-surface-variant font-bold uppercase tracking-tight">Average Fit Score</p>
+<p class="text-xl font-black text-primary font-mono">79.2%</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-2 px-5 py-2.5 text-primary border-2 border-primary/10 font-bold rounded-xl hover:bg-primary/5 transition-all text-sm">
+<span class="material-symbols-outlined text-lg" data-icon="picture_as_pdf">picture_as_pdf</span>
+                    Download PDF Report
+                </button>
+<button class="flex items-center gap-2 px-6 py-2.5 bg-secondary text-white font-bold rounded-xl shadow-lg shadow-secondary/20 hover:bg-primary transition-all active:scale-95 text-sm">
+<span class="material-symbols-outlined text-lg" data-icon="share">share</span>
+                    Share Shortlist
+                </button>
+</div>
+</div>
+</main>
+</body></html>
