@@ -91,3 +91,22 @@ class HealthResponse(BaseModel):
     ml_model_loaded: bool
     db_connected: bool
     version: str
+
+
+class BulkScreeningResult(BaseModel):
+    screening_id: str
+    filename: str
+    overall_score: float
+    confidence: str
+    section_scores: SectionScores
+    matched_skills: list[str] = []
+    missing_skills: list[str] = []
+    rank: int = 0
+
+
+class BulkUploadResponse(BaseModel):
+    results: list[BulkScreeningResult]
+    job_title: str = ""
+    company: str = ""
+    total_processed: int
+    failed: int = 0

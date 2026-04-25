@@ -75,6 +75,7 @@ app.add_middleware(
 # Register routes
 from routes.health import router as health_router
 from routes.upload import router as upload_router
+from routes.bulk_upload import router as bulk_upload_router
 from routes.feedback import router as feedback_router
 from routes.history import router as history_router
 from routes.jobs import router as jobs_router
@@ -85,6 +86,7 @@ app.state.temp_results_store = {}
 
 app.include_router(health_router)
 app.include_router(upload_router)
+app.include_router(bulk_upload_router)
 app.include_router(feedback_router)
 app.include_router(history_router)
 app.include_router(jobs_router)

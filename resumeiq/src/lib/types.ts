@@ -73,3 +73,22 @@ export interface HealthCheck {
   db_connected: boolean;
   version: string;
 }
+
+export interface BulkScreeningResult {
+  screening_id: string;
+  filename: string;
+  overall_score: number;
+  confidence: 'Low' | 'Medium' | 'High';
+  section_scores: SectionScores;
+  matched_skills: string[];
+  missing_skills: string[];
+  rank: number;
+}
+
+export interface BulkUploadResponse {
+  results: BulkScreeningResult[];
+  job_title: string;
+  company: string;
+  total_processed: number;
+  failed: number;
+}

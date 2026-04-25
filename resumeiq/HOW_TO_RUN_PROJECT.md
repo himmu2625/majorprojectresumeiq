@@ -14,8 +14,9 @@ This runs the Python AI engine that scores the resumes.
    ```
 3. Start the FastAPI server using the virtual environment:
    ```powershell
-   .\venv\Scripts\uvicorn main:app --reload --host 0.0.0.0 --port 8000
+   .\venv\Scripts\python.exe -m uvicorn main:app --reload --host 0.0.0.0 --port 8000
    ```
+   > **Note:** Use `python.exe -m uvicorn` (not `uvicorn.exe` directly). Windows Application Control policies often block `.exe` files run from `venv\Scripts\`. Running via Python module bypasses this.
 *(Leave this terminal running in the background. It will show a message when it's ready on port 8000).*
 
 ---

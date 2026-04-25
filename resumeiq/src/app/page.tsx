@@ -10,11 +10,11 @@ export default function LandingPage() {
           <div className="hidden md:flex items-center space-x-8">
             <a className="text-white border-b-2 border-white pb-1 font-medium" href="#how-it-works">How It Works</a>
             <a className="text-blue-100/80 hover:text-white transition-colors font-medium" href="#features">For Recruiters</a>
-            <Link className="text-blue-100/80 hover:text-white transition-colors font-medium" href="/feedback">For Candidates</Link>
+            <Link className="text-blue-100/80 hover:text-white transition-colors font-medium" href="/role-select">For Candidates</Link>
           </div>
           <div className="flex items-center space-x-4">
-            <Link href="/candidates" className="text-blue-100/80 hover:text-white transition-colors font-medium px-4 py-2">Sign In</Link>
-            <Link href="/screen" className="bg-white text-[#1B3F7A] hover:opacity-90 transition-opacity px-6 py-2 rounded-lg font-bold">Start Free</Link>
+            <Link href="/role-select" className="text-blue-100/80 hover:text-white transition-colors font-medium px-4 py-2">Sign In</Link>
+            <Link href="/role-select" className="bg-white text-[#1B3F7A] hover:opacity-90 transition-opacity px-6 py-2 rounded-lg font-bold">Start Free</Link>
           </div>
         </nav>
       </header>
@@ -33,8 +33,8 @@ export default function LandingPage() {
               ResumeIQ uses semantic AI to understand resume meaning, not just words. Every decision comes with a clear explanation.
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-4 mb-8">
-              <Link href="/screen" className="bg-[#2E7CF6] text-white px-8 py-4 rounded-lg font-bold text-lg flex items-center gap-2 hover:opacity-90 transition-opacity">
-                Screen a Resume Now
+              <Link href="/role-select" className="bg-[#2E7CF6] text-white px-8 py-4 rounded-lg font-bold text-lg flex items-center gap-2 hover:opacity-90 transition-opacity">
+                Get Started Free
                 <span className="material-symbols-outlined">arrow_forward</span>
               </Link>
               <a href="#how-it-works" className="bg-white text-[#1B3F7A] border-2 border-[#1B3F7A] px-8 py-4 rounded-lg font-bold text-lg hover:bg-surface-container-low transition-colors">

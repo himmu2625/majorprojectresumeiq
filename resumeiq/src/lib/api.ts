@@ -1,4 +1,4 @@
-import { ScreeningResult, ScreeningSummary, JobOpening, FeedbackResult } from './types';
+import { ScreeningResult, ScreeningSummary, JobOpening, FeedbackResult, BulkUploadResponse } from './types';
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
 
@@ -44,6 +44,23 @@ export async function submitFeedback(resumeText: string, jd: string): Promise<Fe
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ resume_text: resumeText, job_description: jd }),
   });
+  if (!res.ok) throw new Error(await res.text());
+  return res.json();
+}
+
+export async function bulkUploadResumes(
+  files: File[],
+  jobDescription: string,
+  jobTitle?: string,
+  company?: string,
+): Promise<BulkUploadResponse> {
+  const formData = new FormData();
+  files.forEach(f => formData.append('resume_files', f));
+  formData.append('job_description', jobDescription);
+  if (jobTitle) formData.append('job_title', jobTitle);
+  if (company) formData.append('company', company);
+
+  const res = await fetch(`${API_BASE}/bulk-upload`, { method: 'POST', body: formData });
   if (!res.ok) throw new Error(await res.text());
   return res.json();
 }
